@@ -1,31 +1,39 @@
 window.onload = init;
 
 function init(){
-    // Array de valores numericos para asignarle a cada tecla
     const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     numbers.sort(() => Math.random() - 0.5);
 
     const Password_Element = document.getElementById("password");
-    const Delete_Element = document.getElementById("delete");
     const Number_Box = document.getElementById("number_box");
 
+    Number_Box.addEventListener("mouseover", (e) => {
+        assignNumbers(numbers);
+    })
 
-    // Asignacion de numeros aleatorios por tecla
-    for (let i = 0; i < 10; i++) {
-        document.getElementById(i+"").value = numbers[i];
-    }
+    Number_Box.addEventListener("mouseout", (e) => {
+        assignCharacters()
+    })
 
-    // Ingresar valores al input del box
     Number_Box.addEventListener("click", (e) => {
-        if (e.target.type === "button" && e.target.id !== "delete"){
-            console.log(e.target.value);
+        if (e.target.className === "key") {
             Password_Element.value += e.target.value;
+        } else if (e.target.id === "delete") {
+            Password_Element.value = "";
         }
     })
 
-    // Funcion de borrado
-    Delete_Element.addEventListener("click", function(){
-        Password_Element.value = ""
-    })
+    function assignNumbers(numbers) {
+        for (let i = 0; i < 10; i++) {
+            document.getElementById(i+"").value = numbers[i];
+        }
+    }
+
+    function assignCharacters() {
+        for (let i = 0; i < 10; i++) {
+            document.getElementById(i+"").value = "*";
+        }
+    }
+
 }
 

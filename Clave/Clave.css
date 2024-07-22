@@ -45,3 +45,7 @@ body {
 .delete-key {
     grid-column-start: span 2;
 }
+
+.key::before{
+    content: "X";
+}
