@@ -1,3 +1,137 @@
+/* Palette Color */
+:root{
+    --color-text: #f4f4f4
+}
+
+/* Font Family*/
+:root{
+    --font-familia: "Poppins";
+}
+
+/* If screen size is more than 1280px */
+@media (min-width: 1280px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 80px;
+
+        #logo {
+            svg{
+                width: 160px;
+                fill: var(--color-text);
+            }
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style: none;
+                padding: 0 30px;
+
+                a {
+                    color: var(--color-text);
+                    text-decoration: none;
+                    font-family: var(--font-familia), sans-serif;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        #menu a {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            span{
+                display: none;
+            }
+           svg {
+               width: 22px;
+               fill: var(--color-text);
+           }
+        }
+    }
+
+    #about{
+
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1279px) {
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 33px 38px;
+
+        #logo {
+            svg{
+                width: 137px;
+                fill: var(--color-text);
+            }
+        }
+
+        nav {
+            display: none;
+        }
+
+        #menu a {
+            span{
+                color: var(--color-text);
+                font-family: var(--font-familia), sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+            }
+            svg{
+                display: none;
+            }
+        }
+
+    }
+
+}
+
+@media (max-width: 719px) {
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 33px 38px;
+
+        #logo {
+            svg{
+                width: 137px;
+                fill: var(--color-text);
+            }
+        }
+
+        nav {
+            display: none;
+        }
+
+        #menu a {
+            span{
+                color: var(--color-text);
+                font-family: var(--font-familia), sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+            }
+            svg{
+                display: none;
+            }
+        }
+
+    }
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -5,7 +139,7 @@ body {
     color: #f4f4f4;
 }
 
-header {
+/*header {
     position: fixed;
     width: 100%;
     top: 0;
@@ -47,7 +181,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #f9cdcd;
-}
+}*/
 
 main {
     margin-top: 60px; /* Ajustar según la altura del header */
