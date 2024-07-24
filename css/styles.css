@@ -1,6 +1,7 @@
 /* Palette Color */
 :root{
-    --color-text: #f4f4f4
+    --color-text: #f4f4f4;
+    --color-banckground: #252422;
 }
 
 /* Font Family*/
@@ -59,7 +60,48 @@
     }
 
     #about{
+        padding: 80px;
+        .container{
+            display: flex ;
+            flex-direction: row;
+            justify-content: space-between;
 
+            .text {
+                width: 502px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                p{
+                    font-family: var(--font-familia), sans-serif;
+                    font-size: 36px;
+                    font-weight: 400;
+                    text-align: left;
+                    letter-spacing: -0.035em;
+                    line-height: 1.1;
+                    margin: 0;
+                }
+                a{
+                    margin: 40px 0 0 0;
+                    padding: 7px 30px;
+                    border: 1px solid var(--color-banckground);
+                    border-radius: 1.6rem;
+                    font-family: var(--font-familia), sans-serif;
+                    font-size: 13px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    letter-spacing: -0.035em;
+                    line-height: 1.1;
+
+                }
+            }
+            .logo{
+                svg{
+                    width: 466px;
+                    height: min-content;
+                    fill: var(--color-banckground);
+                }
+            }
+        }
     }
 }
 
@@ -96,6 +138,52 @@
 
     }
 
+    #about{
+        padding: 38px;
+        .container{
+            display: flex ;
+            flex-direction: column;
+
+            .text {
+                width: 340px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                p{
+                    font-family: var(--font-familia), sans-serif;
+                    font-size: 20px;
+                    font-weight: 400;
+                    text-align: left;
+                    letter-spacing: -0.035em;
+                    line-height: 1.1;
+                    margin: 0;
+                }
+                a{
+                    margin: 40px 0 0 0;
+                    padding: 7px 30px;
+                    border: 1px solid var(--color-banckground);
+                    border-radius: 1.6rem;
+                    font-family: var(--font-familia), sans-serif;
+                    font-size: 13px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    letter-spacing: -0.035em;
+                    line-height: 1.1;
+
+                }
+            }
+            .logo{
+                display: flex;
+                justify-content: flex-end;
+                svg{
+                    width: 382px;
+                    height: min-content;
+                    padding-top: 60px;
+                    fill: var(--color-banckground);
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 719px) {
@@ -129,6 +217,53 @@
             }
         }
 
+    }
+
+    #about{
+        padding: 38px;
+        .container{
+            display: flex ;
+            flex-direction: column;
+
+            .text {
+                width: 340px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                p{
+                    font-family: var(--font-familia), sans-serif;
+                    font-size: 20px;
+                    font-weight: 400;
+                    text-align: left;
+                    letter-spacing: -0.035em;
+                    line-height: 1.1;
+                    margin: 0;
+                }
+                a{
+                    margin: 40px 0 0 0;
+                    padding: 7px 30px;
+                    border: 1px solid var(--color-banckground);
+                    border-radius: 1.6rem;
+                    font-family: var(--font-familia), sans-serif;
+                    font-size: 13px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    letter-spacing: -0.035em;
+                    line-height: 1.1;
+
+                }
+            }
+            .logo{
+                display: flex;
+                justify-content: flex-end;
+                svg{
+                    width: 255px;
+                    height: min-content;
+                    padding-top: 60px;
+                    fill: var(--color-banckground);
+                }
+            }
+        }
     }
 }
 
@@ -412,43 +547,43 @@ footer p {
     margin: 0;
 }
 
-/* Nuevos estilos para la sección about */
-#about .intro {
-    text-align: center;
-}
+/*!* Nuevos estilos para la sección about *!*/
+/*#about .intro {*/
+/*    text-align: center;*/
+/*}*/
 
-#about .container {
-    width: 80%;
-    margin: auto;
-}
+/*#about .container {*/
+/*    width: 80%;*/
+/*    margin: auto;*/
+/*}*/
 
-#about h1 {
-    font-size: 24px; /* Ajusta el tamaño según tus necesidades */
-    margin-bottom: 20px; /* Espacio entre el título y el botón */
-}
+/*#about h1 {*/
+/*    font-size: 24px; !* Ajusta el tamaño según tus necesidades *!*/
+/*    margin-bottom: 20px; !* Espacio entre el título y el botón *!*/
+/*}*/
 
-#about button {
-    margin-bottom: 20px; /* Espacio entre el botón y las imágenes */
-}
+/*#about button {*/
+/*    margin-bottom: 20px; !* Espacio entre el botón y las imágenes *!*/
+/*}*/
 
-#about .images .image-container {
-    display: inline-block; /* Alinea las imágenes horizontalmente */
-    margin-right: 10px; /* Espacio entre las imágenes */
-}
+/*#about .images .image-container {*/
+/*    display: inline-block; !* Alinea las imágenes horizontalmente *!*/
+/*    margin-right: 10px; !* Espacio entre las imágenes *!*/
+/*}*/
 
-#about .images .image-container:last-child {
-    margin-right: 0; /* Elimina el espacio después de la última imagen */
-}
+/*#about .images .image-container:last-child {*/
+/*    margin-right: 0; !* Elimina el espacio después de la última imagen *!*/
+/*}*/
 
-#about .image-container img {
-    width: 100%; /* Hace que la imagen sea responsive al tamaño del contenedor */
-    height: auto;
-}
+/*#about .image-container img {*/
+/*    width: 100%; !* Hace que la imagen sea responsive al tamaño del contenedor *!*/
+/*    height: auto;*/
+/*}*/
 
-#about .image-container::after {
-    content: attr(alt); /* Muestra el texto del atributo "alt" debajo de cada imagen */
-    display: block;
-    margin-top: 5px; /* Espacio entre la imagen y el texto */
-    font-size: 0.9em; /* Tamaño del texto debajo de la imagen */
-    color: #666; /* Color del texto debajo de la imagen */
-}
+/*#about .image-container::after {*/
+/*    content: attr(alt); !* Muestra el texto del atributo "alt" debajo de cada imagen *!*/
+/*    display: block;*/
+/*    margin-top: 5px; !* Espacio entre la imagen y el texto *!*/
+/*    font-size: 0.9em; !* Tamaño del texto debajo de la imagen *!*/
+/*    color: #666; !* Color del texto debajo de la imagen *!*/
+/*}*/
