@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     };
 
     // Efecto de cursor y estilo en hover para botones y el elemento arrastrable
-    const button = document.querySelector('button');
-    [button, draggable].forEach(element => {
+    const elements = document.querySelectorAll('button, #draggable, video');
+    elements.forEach(element => {
         element.addEventListener('mouseover', function() {
             element.style.cursor = 'pointer';
             element.style.backgroundColor = '#252422';
@@ -62,7 +62,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     
     // Navegación automática a la sección "Contact Us" después de 10 segundos
     setTimeout(function() {
-        document.querySelector('a[href="#contact"]').click();
+        const contactLink = document.querySelector('a[href="#contact"]');
+        if (contactLink) {
+            contactLink.click();
+        }
     }, 10000); // 10000 milisegundos = 10 segundos
 
     // Efectos en el elemento de vídeo
@@ -88,6 +91,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         video.addEventListener('ended', function() {
             document.body.style.backgroundColor = '';
+            // Redirige a la sección "about" después de que el video termine
+            window.location.hash = '#about';
         });
     }
+
+    // Reproducir vídeo en fondo al hacer clic en "PLAY REEL"
+    const playReelBtn = document.getElementById('playReelBtn');
+    const backgroundVideo = document.getElementById('backgroundVideo');
+
+    playReelBtn.addEventListener('click', function() {
+        backgroundVideo.classList.remove('hidden');
+        backgroundVideo.play();
+        // Ocultar el botón después de hacer clic
+        playReelBtn.style.display = 'none';
+    });
 });
