@@ -100,10 +100,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const playReelBtn = document.getElementById('playReelBtn');
     const backgroundVideo = document.getElementById('backgroundVideo');
 
-    playReelBtn.addEventListener('click', function() {
-        backgroundVideo.classList.remove('hidden');
-        backgroundVideo.play();
-        // Ocultar el botón después de hacer clic
-        playReelBtn.style.display = 'none';
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Reproducir vídeo en fondo al hacer clic en "PLAY REEL"
+        const playReelBtn = document.getElementById('playReelBtn');
+        const backgroundVideo = document.getElementById('backgroundVideo');
+    
+        playReelBtn.addEventListener('click', function() {
+            backgroundVideo.classList.remove('hidden');
+            backgroundVideo.play();
+            // Ocultar el botón después de hacer clic
+            playReelBtn.style.display = 'none';
+        });
     });
+    
 });
