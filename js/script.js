@@ -16,7 +16,7 @@ function init() {
     sectionVideo.addEventListener('mouseout', () => {
         playButton.style.left = 55 + '%';
         //cursor.style.top = (50 - window.scrollY) + '%';
-        playButton.style.top = 60  + '%';
+        playButton.style.top = 60 + '%';
     })
 
 
