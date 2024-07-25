@@ -52,15 +52,42 @@ document.addEventListener('DOMContentLoaded', (event) => {
             header.style.color = '';
         }
     });
+
+    // Mostrar más noticias
     document.getElementById('view-more').addEventListener('click', function() {
         const moreNews = document.getElementById('more-news');
         moreNews.classList.toggle('hidden');
         this.textContent = moreNews.classList.contains('hidden') ? 'VIEW ALL' : 'VIEW LESS';
     });
     
-
     // Navegación automática a la sección "Contact Us" después de 10 segundos
     setTimeout(function() {
         document.querySelector('a[href="#contact"]').click();
     }, 10000); // 10000 milisegundos = 10 segundos
+
+    // Efectos en el elemento de vídeo
+    const video = document.querySelector('video');
+    if (video) {
+        video.addEventListener('mouseover', function() {
+            video.style.cursor = 'pointer';
+            video.style.backgroundColor = '#252422';
+            video.style.color = '#f4f4f4';
+        });
+        video.addEventListener('mouseout', function() {
+            video.style.backgroundColor = '';
+            video.style.color = '';
+        });
+
+        video.addEventListener('play', function() {
+            document.body.style.backgroundColor = '#252422';
+        });
+
+        video.addEventListener('pause', function() {
+            document.body.style.backgroundColor = '';
+        });
+
+        video.addEventListener('ended', function() {
+            document.body.style.backgroundColor = '';
+        });
+    }
 });
