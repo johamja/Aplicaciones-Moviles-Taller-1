@@ -2,6 +2,7 @@
 :root {
     --color-background: #f4f4f4;
     --color-text: #252422;
+    --color-text2: #f9cdcd;
 }
 
 /* Font Family*/
@@ -116,7 +117,6 @@
             width: 100%;
         }
     }
-
 
     #about {
         padding: 80px;
@@ -297,6 +297,72 @@
 
         .container::-webkit-scrollbar-thumb {
             background: var(--color-text);
+        }
+    }
+
+    #about_us {
+        padding: 0 80px;
+        margin: 160px 0;
+        background: var(--color-text);
+        color: var(--color-text2);
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .box_text {
+                width: 48%;
+                display: flex;
+                flex-direction: column;
+                align-items: self-start;
+
+                h1 {
+                    margin: 0;
+                    font-family: var(--font-familia), sans-serif;
+                    font-size: 80px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    letter-spacing: -0.035em;
+                    line-height: 0.9;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    font-family: var(--font-familia), sans-serif;
+                    font-size: 18px;
+                    font-weight: 500;
+                    text-align: left;
+                    letter-spacing: -0.035em;
+                    line-height: 1.5;
+                    margin: 20px 0 0 0;
+                }
+
+                a {
+                    margin: 80px 0 0 0;
+                    padding: 8px 30px;
+                    border: 1px solid var(--color-text2);
+                    border-radius: 1.6rem;
+                    font-family: var(--font-familia), sans-serif;
+                    font-size: 13px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    letter-spacing: -0.035em;
+                    line-height: 1.1;
+                }
+            }
+
+            .box_video {
+                width: 48%;
+                height: 770px;
+                overflow: hidden;
+
+                video {
+                    width: auto;
+                    height: 100%;
+                    display: block;
+                }
+            }
         }
     }
 }
