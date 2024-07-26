@@ -13,12 +13,16 @@
 /* If screen size is more than 1280px */
 @media (min-width: 1280px) {
     header {
+        transition: 0.4s;
         display: flex;
+        position: fixed;
+        z-index: 5;
+        width: 92%;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 50px 80px;
-        background: var(--color-text);
+        background: transparent;
 
         #logo {
             svg {

@@ -31,4 +31,27 @@ function init() {
             playButton.style.display = 'flex';
         }
     })
+
+    document.addEventListener('scroll', (e) => {
+        const header = document.querySelector('header');
+        const a = document.querySelectorAll('header nav ul li a');
+        const logo = document.querySelector('header #logo svg');
+        const menu = document.querySelector('header #menu a svg');
+
+        if (window.scrollY > 0) {
+            header.style.backgroundColor = 'var(--color-background)';
+            a.forEach(value => {
+                value.style.color = 'var(--color-text)';
+            })
+            logo.style.fill = 'var(--color-text)';
+            menu.style.fill = 'var(--color-text)';
+        } else {
+            header.style.backgroundColor = 'transparent';
+            a.forEach(value => {
+                value.style.color = 'white';
+            })
+            logo.style.fill = 'var(--color-background)';
+            menu.style.fill = 'var(--color-background)';
+        }
+    })
 }
