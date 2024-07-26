@@ -596,12 +596,15 @@
 
 @media (min-width: 720px) and (max-width: 1279px) {
     header {
+        transition: 0.4s;
+        position: fixed;
+        z-index: 5;
+        width: 92%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 33px 38px;
-        background: var(--color-text);
 
         #logo {
             svg {
@@ -1177,12 +1180,15 @@
 
 @media (max-width: 719px) {
     header {
+        transition: 0.4s;
+        position: fixed;
+        z-index: 5;
+        width: 92%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 33px 38px;
-        background: var(--color-text);
 
         #logo {
             svg {

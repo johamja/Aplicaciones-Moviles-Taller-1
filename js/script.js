@@ -37,6 +37,7 @@ function init() {
         const a = document.querySelectorAll('header nav ul li a');
         const logo = document.querySelector('header #logo svg');
         const menu = document.querySelector('header #menu a svg');
+        const span = document.querySelector('header #menu a span');
 
         if (window.scrollY > 0) {
             header.style.backgroundColor = 'var(--color-background)';
@@ -45,6 +46,7 @@ function init() {
             })
             logo.style.fill = 'var(--color-text)';
             menu.style.fill = 'var(--color-text)';
+            span.style.color = 'var(--color-text)';
         } else {
             header.style.backgroundColor = 'transparent';
             a.forEach(value => {
@@ -52,6 +54,7 @@ function init() {
             })
             logo.style.fill = 'var(--color-background)';
             menu.style.fill = 'var(--color-background)';
+            span.style.color = 'var(--color-background)';
         }
     })
 }
